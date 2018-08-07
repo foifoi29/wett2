@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LibrairieCell" customModule="Wettly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="429"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="277" height="429"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yq7-gY-cfs">
+                        <rect key="frame" x="0.0" y="0.0" width="277" height="277"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Yq7-gY-cfs" secondAttribute="height" id="QLd-m8-n1u"/>
+                        </constraints>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-Te-cF6">
+                        <rect key="frame" x="0.0" y="277" width="277" height="152"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f9X-a3-NSH">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Yq7-gY-cfs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0hu-oQ-1jT"/>
+                <constraint firstItem="Yq7-gY-cfs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FbB-ch-LwO"/>
+                <constraint firstAttribute="bottom" secondItem="3RY-Te-cF6" secondAttribute="bottom" id="Huw-J6-NfM"/>
+                <constraint firstAttribute="trailing" secondItem="3RY-Te-cF6" secondAttribute="trailing" id="MyN-3g-ytc"/>
+                <constraint firstItem="3RY-Te-cF6" firstAttribute="top" secondItem="Yq7-gY-cfs" secondAttribute="bottom" id="W0R-mC-VT8"/>
+                <constraint firstAttribute="trailing" secondItem="Yq7-gY-cfs" secondAttribute="trailing" id="XE2-Qd-RtR"/>
+                <constraint firstItem="3RY-Te-cF6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="reI-zS-gnm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="277" height="429"/>
+            <connections>
+                <outlet property="collectionView" destination="3RY-Te-cF6" id="PKX-ok-YVS"/>
+                <outlet property="imageView" destination="Yq7-gY-cfs" id="sv7-mR-iv3"/>
+            </connections>
+            <point key="canvasLocation" x="147.5" y="19.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

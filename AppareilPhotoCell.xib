@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AppareilPhotoCell" customModule="Wettly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="477" height="544"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="477" height="544"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRu-fM-s0N">
+                        <rect key="frame" x="425" y="482" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="DAF-vX-CcF"/>
+                            <constraint firstAttribute="height" constant="32" id="iXl-lR-k2W"/>
+                        </constraints>
+                        <state key="normal" image="rotation-plein-50"/>
+                        <connections>
+                            <action selector="actionRotation:" destination="gTV-IL-0wX" eventType="touchUpInside" id="W8n-Lo-6tb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-G1-XfQ">
+                        <rect key="frame" x="206" y="480" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="DGU-vZ-lDI"/>
+                            <constraint firstAttribute="width" constant="64" id="H44-JR-32y"/>
+                        </constraints>
+                        <state key="normal" image="cercle-plein-100"/>
+                        <connections>
+                            <action selector="actionPrendrePhoto:" destination="gTV-IL-0wX" eventType="touchUpInside" id="g3q-uE-Mh3"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33J-8o-NXB">
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="438"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="33J-8o-NXB" secondAttribute="height" multiplier="159:137" constant="-31.335766423357654" id="Mxh-bO-zI1"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hJ-xJ-kci">
+                        <rect key="frame" x="20" y="482" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="H6c-90-Xa0"/>
+                            <constraint firstAttribute="width" constant="32" id="bYp-ks-sgr"/>
+                        </constraints>
+                        <state key="normal" image="flash-désactivé-plein-50"/>
+                        <connections>
+                            <action selector="actionFlash:" destination="gTV-IL-0wX" eventType="touchUpInside" id="IO9-Tn-MZ5"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="33J-8o-NXB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="35q-D3-RoW"/>
+                <constraint firstAttribute="bottom" secondItem="7hJ-xJ-kci" secondAttribute="bottom" constant="30" id="865-Vj-CVx"/>
+                <constraint firstItem="Lwp-G1-XfQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="OkC-JL-iCo"/>
+                <constraint firstAttribute="bottom" secondItem="MRu-fM-s0N" secondAttribute="bottom" constant="30" id="PEE-wA-ZcN"/>
+                <constraint firstAttribute="trailing" secondItem="MRu-fM-s0N" secondAttribute="trailing" constant="20" id="QJ7-WY-E3L"/>
+                <constraint firstAttribute="trailing" secondItem="33J-8o-NXB" secondAttribute="trailing" id="auT-ba-iAz"/>
+                <constraint firstItem="7hJ-xJ-kci" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="co6-Rx-iks"/>
+                <constraint firstItem="33J-8o-NXB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tod-VG-3ly"/>
+                <constraint firstAttribute="bottom" secondItem="Lwp-G1-XfQ" secondAttribute="bottom" id="u5P-ft-bbW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="477" height="544"/>
+            <connections>
+                <outlet property="boutonFlash" destination="7hJ-xJ-kci" id="vPs-Tb-Epx"/>
+                <outlet property="boutonPrendrePhoto" destination="Lwp-G1-XfQ" id="LeI-Wm-P75"/>
+                <outlet property="boutonRotation" destination="MRu-fM-s0N" id="CRU-4w-jNf"/>
+                <outlet property="vueCamera" destination="33J-8o-NXB" id="hUa-Ze-hxF"/>
+            </connections>
+            <point key="canvasLocation" x="188.5" y="-382"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cercle-plein-100" width="50" height="50"/>
+        <image name="flash-désactivé-plein-50" width="25" height="25"/>
+        <image name="rotation-plein-50" width="25" height="25"/>
+    </resources>
+</document>

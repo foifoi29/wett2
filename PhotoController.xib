@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoController" customModule="Wettly" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="ggg-aC-Bsc" id="gaU-Ju-Rxy"/>
+                <outlet property="segment" destination="xg3-cw-YZp" id="bYC-91-O6P"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ggg-aC-Bsc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aIW-Tv-XYW">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xg3-cw-YZp" customClass="SegmentedControll" customModule="Wettly" customModuleProvider="target">
+                    <rect key="frame" x="20" y="630" width="335" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="1wF-tY-f9E"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Appareil photo"/>
+                        <segment title="Librairie"/>
+                    </segments>
+                    <color key="tintColor" red="0.9790410692" green="0.97577110150000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="actionSegment:" destination="-1" eventType="valueChanged" id="kHc-Bl-YwN"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ggg-aC-Bsc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FMQ-cf-kl8"/>
+                <constraint firstItem="ggg-aC-Bsc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L4g-or-EqD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xg3-cw-YZp" secondAttribute="trailing" constant="20" id="Xpm-Cz-ZES"/>
+                <constraint firstItem="xg3-cw-YZp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e81-z5-wAi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xg3-cw-YZp" secondAttribute="bottom" constant="10" id="pnq-1s-Xe4"/>
+                <constraint firstItem="ggg-aC-Bsc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vbc-TA-rfM"/>
+                <constraint firstItem="xg3-cw-YZp" firstAttribute="top" secondItem="ggg-aC-Bsc" secondAttribute="bottom" constant="10" id="wez-3Z-d2J"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="35.5" y="308.5"/>
+        </view>
+    </objects>
+</document>
